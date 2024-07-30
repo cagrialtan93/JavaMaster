@@ -1,0 +1,15 @@
+* to list remote branches
+git branch -r
+
+* to download specific remote branch
+git checkout -t origin/control-flow
+
+* continue
+to ignore or skip code for certain values
+incremention needs to done before
+
+* tip
+summer ? 45 : 35;
+
+* tip
+return number > 0 && number % 2 != 0;
