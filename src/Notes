@@ -21,3 +21,13 @@ return temperature = 25 && temperature <= upperLimit; -> means return true if co
 * tip-4
 declare variables in the narrowest scope possible
 declare and initialize variables in the same place if possible
+
+* tip-5
+long for integers and double for real numbers
+
+*tip-6
+Math.abs take the numbers absolute value.
+
+*tip-7
+return oppositeOfNumber == hold;
+use this instead of if this and that equals return true.

@@ -1,6 +1,6 @@
 public class LoopPractice {
     public static void main(String[] args) {
-
+        System.out.println(isPalindrome(2232));
     }
 
     public static boolean isPrime(int number) {
@@ -75,7 +75,7 @@ public class LoopPractice {
 
     public static int sumDigits(int number) {
         int total = 0;
-        if (number < 0){
+        if (number < 0) {
             return -1;
         }
         while (number > 9) {
@@ -84,5 +84,19 @@ public class LoopPractice {
         }
         total += number;
         return total;
+    }
+
+
+    public static boolean isPalindrome(int number) {
+        int hold = number;
+        int oppositeOfNumber = 0;
+
+        while (number != 0){
+            int digit = number % 10;
+            oppositeOfNumber = (oppositeOfNumber * 10) + digit;
+            number /= 10;
+        }
+
+        return oppositeOfNumber == hold;
     }
 }
