@@ -1,6 +1,8 @@
+import com.sun.source.tree.BreakTree;
+
 public class LoopPractice {
     public static void main(String[] args) {
-        System.out.println(isPalindrome(2232));
+        System.out.println(getEvenDigitSum(2000));
     }
 
     public static boolean isPrime(int number) {
@@ -86,17 +88,63 @@ public class LoopPractice {
         return total;
     }
 
-
     public static boolean isPalindrome(int number) {
         int hold = number;
         int oppositeOfNumber = 0;
 
-        while (number != 0){
+        while (number != 0) {
             int digit = number % 10;
             oppositeOfNumber = (oppositeOfNumber * 10) + digit;
             number /= 10;
         }
 
         return oppositeOfNumber == hold;
+    }
+
+    // to find the first digit divide with 10 until there is one digit left
+    public static int sumFirstAndLastDigit(int number) {
+
+        if (number < 0) {
+            return -1;
+        }
+
+        int lastDigit = number % 10;
+        while (number >= 10) {
+            number /= 10;
+        }
+        int firstDigit = number;
+        return firstDigit + lastDigit;
+
+//        int exponentVersion = (int) Math.pow(10, String.valueOf(Math.abs(number)).length() - 1);
+//        int sumOfDigits = 0;
+//        if (number < 0){
+//            return -1;
+//        }
+//        else if (number < 10 && number >= 0) {
+//            sumOfDigits = number * 2;
+//        } else {
+//            sumOfDigits = number / exponentVersion + number % 10;
+//        }
+//
+//        return sumOfDigits;
+    }
+
+    public static int getEvenDigitSum(int number) {
+        int evenTotal = 0;
+        if (number < 0) {
+            return -1;
+        }
+
+        while (number >= 10) {
+            int digit = number % 10;
+            if (digit % 2 == 0) {
+                evenTotal += digit;
+            }
+            number = number / 10;
+        }
+
+        if (number % 2 == 0) evenTotal += number;
+
+        return evenTotal;
     }
 }

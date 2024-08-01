@@ -31,3 +31,5 @@ Math.abs take the numbers absolute value.
 *tip-7
 return oppositeOfNumber == hold;
 use this instead of if this and that equals return true.
+
+*tip-8
