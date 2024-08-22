@@ -2,7 +2,8 @@ import com.sun.source.tree.BreakTree;
 
 public class LoopPractice {
     public static void main(String[] args) {
-        numberToWords(1450);
+
+        System.out.println(canPack(5, 3, 24));
     }
 
     public static boolean isPrime(int number) {
@@ -232,11 +233,26 @@ public class LoopPractice {
             number /= 10;
         }
 
-        if (reversedVersion != number){
+        if (reversedVersion != number) {
             reversedVersion *= 10;
         }
 
         return reversedVersion;
+    }
+
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+        int fiveKilosAmount = bigCount * 5;
+        int amountNeeded = goal - fiveKilosAmount;
+
+        if (fiveKilosAmount > goal) {
+            return goal % 5 == 0 || (smallCount >= goal % 5);
+        }
+
+        if (smallCount >= amountNeeded) {
+            return true;
+        } else {
+            return false;
+        }
     }
 }
 
