@@ -2,6 +2,7 @@ import com.sun.source.tree.BreakTree;
 
 public class LoopPractice {
     public static void main(String[] args) {
+
     }
 
     public static boolean isPrime(int number) {
@@ -146,111 +147,6 @@ public class LoopPractice {
 
         return evenTotal;
     }
-
-    public static void printFactors(int number) {
-        if (number < 1) {
-            System.out.println("Invalid Value");
-        }
-
-        for (int i = 1; i <= number; i++) {
-            if (number % i == 0) {
-                System.out.print(" " + i);
-            }
-        }
-    }
-
-    public static int getGreatestCommonDivisor(int first, int second) {
-        if (first < 10 || second < 10) {
-            return -1;
-        }
-        int greatestDivisor = 1;
-
-        for (int i = 1; i <= Math.min(first, second); i++) {
-            if (first % i == 0 && second % i == 0) {
-                greatestDivisor = i;
-            }
-        }
-
-        return greatestDivisor;
-    }
-
-    public static boolean isPerfectNumber(int number) {
-        if (number < 1) {
-            return false;
-        }
-        int total = 0;
-        for (int i = 1; i < number; i++) {
-            if (number % i == 0) {
-                total += i;
-            }
-        }
-
-        return total == number;
-    }
-
-    public static void numberToWords(int number) {
-
-        if (number < 0) {
-            System.out.println("Invalid Value");
-        }
-        number = reverse(number);
-
-        while (number != 0) {
-            int lastDigit = number % 10;
-            number = number / 10;
-
-            switch (lastDigit) {
-                case 0 -> System.out.print("Zero");
-                case 1 -> System.out.print("One");
-                case 2 -> System.out.print("Two");
-                case 3 -> System.out.print("Three");
-                case 4 -> System.out.print("Four");
-                case 5 -> System.out.print("Five");
-                case 6 -> System.out.print("Six");
-                case 7 -> System.out.print("Seven");
-                case 8 -> System.out.print("Eight");
-                case 9 -> System.out.print("Nine");
-            }
-            System.out.print(" ");
-
-        }
-    }
-
-    public static int getDigitCount(int number) {
-        if (number < 0) {
-            return -1;
-        }
-        return String.valueOf(Math.abs(number)).length();
-    }
-
-    public static int reverse(int number) {
-        int reversedVersion = 0;
-        while (number != 0) {
-            int digit = number % 10;
-            reversedVersion = (reversedVersion * 10) + digit;
-            number /= 10;
-        }
-
-        if (reversedVersion != number) {
-            reversedVersion *= 10;
-        }
-
-        return reversedVersion;
-    }
-
-    public static boolean canPack(int bigCount, int smallCount, int goal) {
-        int fiveKilosAmount = bigCount * 5;
-        int amountNeeded = goal - fiveKilosAmount;
-
-        if (fiveKilosAmount > goal) {
-            return goal % 5 == 0 || (smallCount >= goal % 5);
-        }
-
-        if (smallCount >= amountNeeded) {
-            return true;
-        } else {
-            return false;
-        }
     }
 }
 
