@@ -2,8 +2,6 @@ import com.sun.source.tree.BreakTree;
 
 public class LoopPractice {
     public static void main(String[] args) {
-
-        System.out.println(canPack(5, 3, 24));
     }
 
     public static boolean isPrime(int number) {
