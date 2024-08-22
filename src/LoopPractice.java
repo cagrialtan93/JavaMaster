@@ -148,5 +148,9 @@ public class LoopPractice {
         return evenTotal;
     }
     }
+
+    public void hello(){
+        System.out.println("test");
+    }
 }
 
