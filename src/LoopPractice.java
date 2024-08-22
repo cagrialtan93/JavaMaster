@@ -254,5 +254,9 @@ public class LoopPractice {
             return false;
         }
     }
+
+    public void hello(){
+        System.out.println("test");
+    }
 }
 
