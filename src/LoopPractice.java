@@ -2,7 +2,7 @@ import com.sun.source.tree.BreakTree;
 
 public class LoopPractice {
     public static void main(String[] args) {
-        System.out.println(hasSameLastDigit(12, 13,35));
+
     }
 
     public static boolean isPrime(int number) {
@@ -147,36 +147,6 @@ public class LoopPractice {
 
         return evenTotal;
     }
-
-
-    public static boolean hasSharedDigit(int a, int b) {
-        if (a > 99 || a < 10 || b > 99 || b < 10) {
-            return false;
-        }
-        int firstDigitB = b % 10;
-        int secondDigitB = b / 10;
-
-
-        for (int i = 0; i < 2; i++) {
-            int digitA = a % 10;
-            a = a / 10;
-
-            if (digitA == firstDigitB || digitA == secondDigitB) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    public static boolean hasSameLastDigit(int a, int b, int c) {
-        if (a > 1000 || a < 10 || b > 1000 || b < 10 || c > 1000 || c < 10) {
-            return false;
-        }
-
-        int firstDigitA = a % 10;
-        int firstDigitB = b % 10;
-        int firstDigitC = c % 10;
-
-        return firstDigitA == firstDigitB || firstDigitA == firstDigitC || firstDigitB == firstDigitC;
     }
 }
+
