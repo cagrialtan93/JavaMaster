@@ -1,8 +1,32 @@
 import com.sun.source.tree.BreakTree;
 
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
 public class LoopPractice {
     public static void main(String[] args) {
-        System.out.println(hasSameLastDigit(12, 13,35));
+        System.out.println(getBucketCount(7.25, 2.35));
+    }
+
+    public static int getBucketCount(double width, double height, double areaPerBucket, int extraBuckets) {
+        if (width <= 0 || height <= 0 || areaPerBucket <= 0 || extraBuckets < 0) {
+            return -1;
+        }
+        return (int) Math.ceil(width * height / areaPerBucket) - extraBuckets;
+    }
+
+    public static int getBucketCount(double width, double height, double areaPerBucket) {
+        if (width <= 0 || height <= 0 || areaPerBucket <= 0) {
+            return -1;
+        }
+        return (int) Math.ceil(width * height / areaPerBucket);
+    }
+
+    public static int getBucketCount(double area, double areaPerBucket) {
+        if (area <= 0 || areaPerBucket <= 0) {
+            return -1;
+        }
+        return (int) Math.ceil(area / areaPerBucket);
     }
 
     public static boolean isPrime(int number) {
@@ -148,7 +172,6 @@ public class LoopPractice {
         return evenTotal;
     }
 
-
     public static boolean hasSharedDigit(int a, int b) {
         if (a > 99 || a < 10 || b > 99 || b < 10) {
             return false;
@@ -178,5 +201,82 @@ public class LoopPractice {
         int firstDigitC = c % 10;
 
         return firstDigitA == firstDigitB || firstDigitA == firstDigitC || firstDigitB == firstDigitC;
+    }
+
+    public static void numberToWords(int number) {
+        int reversedVersion = reverse(number);
+        boolean difference = getDigitCount(reversedVersion) != getDigitCount(number);
+        int digitDifference = getDigitCount(number) - getDigitCount(reversedVersion);
+
+        if (number < 0) {
+            System.out.println("Invalid Value");
+        }
+
+        while (true) {
+            int lastDigit = reversedVersion % 10;
+            reversedVersion = reversedVersion / 10;
+
+            switch (lastDigit) {
+                case 0 -> System.out.print("Zero");
+                case 1 -> System.out.print("One");
+                case 2 -> System.out.print("Two");
+                case 3 -> System.out.print("Three");
+                case 4 -> System.out.print("Four");
+                case 5 -> System.out.print("Five");
+                case 6 -> System.out.print("Six");
+                case 7 -> System.out.print("Seven");
+                case 8 -> System.out.print("Eight");
+                case 9 -> System.out.print("Nine");
+            }
+            System.out.println(" ");
+            if (reversedVersion == 0) {
+                break;
+            }
+        }
+
+        if (difference) {
+            for (int i = 0; i < digitDifference; i++) {
+                System.out.println("Zero");
+            }
+        }
+    }
+
+    public static int getDigitCount(int number) {
+        if (number < 0) {
+            return -1;
+        }
+        return String.valueOf(Math.abs(number)).length();
+    }
+
+    public static int reverse(int number) {
+        int reversedVersion = 0;
+
+        while (number != 0) {
+            int digit = number % 10;
+            reversedVersion = reversedVersion * 10 + digit;
+            number /= 10;
+        }
+
+        return reversedVersion;
+    }
+
+    public static boolean canPack(int bigCount, int smallCount, int goal) {
+        int fiveKilosAmount = bigCount * 5;
+        int fiveNeeded = goal / 5;
+        int oneNeeded = goal % 5;
+        if (bigCount != 0) {
+            oneNeeded = fiveKilosAmount + fiveNeeded * 5;
+        }
+        int totalCount = fiveKilosAmount + smallCount;
+
+        if (bigCount < 0 || smallCount < 0 || goal < 0 || goal > totalCount) {
+            return false;
+        } else if (bigCount == 0 && smallCount >= oneNeeded) {
+            return true;
+        } else if (bigCount + smallCount == 1 && goal != totalCount) {
+            return false;
+        } else if (bigCount >= fiveNeeded && smallCount >= oneNeeded) {
+            return true;
+        } else return false;
     }
 }
