@@ -33,3 +33,9 @@ return oppositeOfNumber == hold;
 use this instead of if this and that equals return true.
 
 *tip-8
+null -> variable or attribute has a type but no reference to an object
+
+*tip-9
+static variables -> common for all instances. not different for each instance.
+
+*tip-10
