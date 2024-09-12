@@ -5,9 +5,7 @@ import java.text.DecimalFormat;
 
 public class Main {
     public static void main(String[] args) {
-        Point firstPoint = new Point(6,5);
-        Point secondPoint = new Point(3,1);
+        Dog dog = new Dog("Maltipoo", 5, "Relaxed", "Relaxed");
         
-        System.out.println(firstPoint.distance(secondPoint));
     }
 }
