@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79517006-9aab-48e7-8691-181b337bd33b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Animal.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Calculator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Carpet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Dog.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/SalariedEmployee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Worker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Floor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Floor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,7 +53,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.Main.executor": "Run",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "inheritance-challenge",
     "kotlin-language-version-configured": "true"
   }
 }]]></component>
