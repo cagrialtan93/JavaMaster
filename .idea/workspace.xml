@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79517006-9aab-48e7-8691-181b337bd33b" name="Changes" comment="class composition practice">
-      <change afterPath="$PROJECT_DIR$/src/Bed.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Bedroom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Ceiling.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Lamp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/DoublyLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkedListNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,12 +32,12 @@
     &quot;assignee&quot;: &quot;cagrialtan93&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings">{
-  &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/cagrialtan93/JavaMaster.git&quot;,
-    &quot;accountId&quot;: &quot;d6b4c2e4-9ce3-4a13-a92e-bdccd228340d&quot;
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/cagrialtan93/JavaMaster.git",
+    "accountId": "7ad0a13a-5fee-44a6-b768-bedad187a614"
   }
-}</component>
+}]]></component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
 }</component>
