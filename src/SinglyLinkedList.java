@@ -1,30 +1,37 @@
-public class DoublyLinkedList {
+public class SinglyLinkedList {
     private LinkedListNode head;
-    private LinkedListNode last;
     private int size;
+
+    public SinglyLinkedList() {
+        this.size = 0;
+    }
 
     public void addToStart(LinkedListNode nodeToAdd) {
         if (size == 0) {
-            head = last = nodeToAdd;
+            head = nodeToAdd;
         } else {
             nodeToAdd.setNext(head);
-            head.setPrev(nodeToAdd);
             head = nodeToAdd;
         }
         size++;
     }
 
-
-    public void printDoublyLinkedList(){
+    public void addToSortedSinglyLinkedList(LinkedListNode nodeToAdd) {
         LinkedListNode current = head;
-        while (current != null){
+        while (current.getNext() != null && nodeToAdd.getValue() > current.getValue()) {
+            current = current.getNext();
+        }
+        nodeToAdd.setNext(current);
+    }
+
+    public void printSinglyLinkedList() {
+        LinkedListNode current = head;
+        while (current.getNext() != null) {
+            LinkedListNode temp = current.getNext();
+            
             System.out.println(current.getValue());
             current = current.getNext();
         }
-    }
-
-    public DoublyLinkedList() {
-        this.size = 0;
     }
 
     public LinkedListNode getHead() {
@@ -33,14 +40,6 @@ public class DoublyLinkedList {
 
     public void setHead(LinkedListNode head) {
         this.head = head;
-    }
-
-    public LinkedListNode getLast() {
-        return last;
-    }
-
-    public void setLast(LinkedListNode last) {
-        this.last = last;
     }
 
     public int getSize() {

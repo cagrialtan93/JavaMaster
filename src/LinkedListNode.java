@@ -1,10 +1,20 @@
 public class LinkedListNode {
     private LinkedListNode next;
     private LinkedListNode prev;
+    private int value;
 
-    public LinkedListNode() {
+    public LinkedListNode(int value) {
+        this.value = value;
         this.next = null;
         this.prev = null;
+    }
+
+    public int getValue() {
+        return value;
+    }
+
+    public void setValue(int value) {
+        this.value = value;
     }
 
     public LinkedListNode getNext() {
