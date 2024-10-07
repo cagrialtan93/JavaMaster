@@ -13,14 +13,14 @@ public class Main {
         LinkedListNode secondNode = new LinkedListNode(27);
         LinkedListNode thirdNode = new LinkedListNode(29);
         LinkedListNode fourthNode = new LinkedListNode(75);
-        LinkedListNode fifthNode = new LinkedListNode(0);
+        LinkedListNode sixthNode = new LinkedListNode(28);
 
         singlyLinkedList.addToStart(fourthNode);
         singlyLinkedList.addToStart(thirdNode);
         singlyLinkedList.addToStart(secondNode);
         singlyLinkedList.addToStart(firstNode);
 
-        singlyLinkedList.addToSortedSinglyLinkedList(fifthNode);
+        singlyLinkedList.addToSorted(sixthNode);
         singlyLinkedList.printSinglyLinkedList();
 
     }

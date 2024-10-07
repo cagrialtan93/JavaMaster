@@ -1,5 +1,8 @@
+import java.util.zip.ZipFile;
+
 public class SinglyLinkedList {
     private LinkedListNode head;
+    private LinkedListNode last;
     private int size;
 
     public SinglyLinkedList() {
@@ -8,7 +11,7 @@ public class SinglyLinkedList {
 
     public void addToStart(LinkedListNode nodeToAdd) {
         if (size == 0) {
-            head = nodeToAdd;
+            head = last = nodeToAdd;
         } else {
             nodeToAdd.setNext(head);
             head = nodeToAdd;
@@ -16,19 +19,40 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public void addToSortedSinglyLinkedList(LinkedListNode nodeToAdd) {
+    public void addToLast(LinkedListNode nodeToAdd) {
+        if (size == 0) {
+            head = last = nodeToAdd;
+        } else {
+            last.setNext(nodeToAdd);
+            last = nodeToAdd;
+        }
+        size++;
+    }
+
+    public void addToSorted(LinkedListNode linkedListNode){
         LinkedListNode current = head;
-        while (current.getNext() != null && nodeToAdd.getValue() > current.getValue()) {
+        LinkedListNode temp = null;
+
+        while (current != null && current.getValue() < linkedListNode.getValue()){
+            temp = current;
             current = current.getNext();
         }
-        nodeToAdd.setNext(current);
+
+        if (temp == null){
+            addToStart(linkedListNode);
+        } else {
+            linkedListNode.setNext(current);
+            temp.setNext(linkedListNode);
+        }
+        size++;
+        System.out.println("Hello");
     }
 
     public void printSinglyLinkedList() {
         LinkedListNode current = head;
-        while (current.getNext() != null) {
+        while (current != null) {
             LinkedListNode temp = current.getNext();
-            
+
             System.out.println(current.getValue());
             current = current.getNext();
         }
