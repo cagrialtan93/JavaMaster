@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="79517006-9aab-48e7-8691-181b337bd33b" name="Changes" comment="updates on doubly and singly">
-      <change afterPath="$PROJECT_DIR$/src/CircularSinglyLinkedList.java" afterDir="false" />
+    <list default="true" id="79517006-9aab-48e7-8691-181b337bd33b" name="Changes" comment="circular linked list implemented">
+      <change afterPath="$PROJECT_DIR$/src/CustomStack.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
@@ -92,7 +92,15 @@
       <option name="project" value="LOCAL" />
       <updated>1728461980703</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="circular linked list implemented">
+      <option name="closed" value="true" />
+      <created>1728464868914</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1728464868914</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +118,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="class composition practice" />
     <MESSAGE value="updates on doubly and singly" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates on doubly and singly" />
+    <MESSAGE value="circular linked list implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="circular linked list implemented" />
   </component>
 </project>
