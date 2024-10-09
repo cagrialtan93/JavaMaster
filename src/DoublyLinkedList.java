@@ -14,10 +14,41 @@ public class DoublyLinkedList {
         size++;
     }
 
+    public void deleteFirstNode() {
+        if (size == 0) {
+            System.out.println("Not happening.");
+        } else {
+            head.getNext().setPrev(null);
+            head = head.getNext();
+        }
+        size--;
+    }
 
-    public void printDoublyLinkedList(){
+    public void deleteLastNode() {
+        if (size == 0) {
+            System.out.println("Not happening.");
+        } else {
+            last.getPrev().setNext(null);
+            last = last.getPrev();
+        }
+        size--;
+    }
+
+    public void addToEnd(LinkedListNode nodeToAdd) {
+        if (size == 0) {
+            head = last = nodeToAdd;
+        } else {
+            last.setNext(nodeToAdd);
+            nodeToAdd.setPrev(last);
+            last = nodeToAdd;
+        }
+        size++;
+    }
+
+
+    public void printDoublyLinkedList() {
         LinkedListNode current = head;
-        while (current != null){
+        while (current != null) {
             System.out.println(current.getValue());
             current = current.getNext();
         }

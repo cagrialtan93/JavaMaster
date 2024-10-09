@@ -1,3 +1,7 @@
+import com.sun.security.jgss.GSSUtil;
+
+import javax.swing.*;
+import java.security.cert.CertificateParsingException;
 import java.util.zip.ZipFile;
 
 public class SinglyLinkedList {
@@ -19,6 +23,14 @@ public class SinglyLinkedList {
         size++;
     }
 
+    public void deleteFromStart() {
+        if (size == 0) {
+            System.out.println("not happening");
+        } else {
+            head = head.getNext();
+        }
+    }
+
     public void addToLast(LinkedListNode nodeToAdd) {
         if (size == 0) {
             head = last = nodeToAdd;
@@ -29,23 +41,60 @@ public class SinglyLinkedList {
         size++;
     }
 
-    public void addToSorted(LinkedListNode linkedListNode){
+    public void addToSorted(LinkedListNode linkedListNode) {
         LinkedListNode current = head;
         LinkedListNode temp = null;
 
-        while (current != null && current.getValue() < linkedListNode.getValue()){
+        while (current != null && current.getValue() < linkedListNode.getValue()) {
             temp = current;
             current = current.getNext();
         }
 
-        if (temp == null){
+        if (temp == null) {
             addToStart(linkedListNode);
         } else {
             linkedListNode.setNext(current);
             temp.setNext(linkedListNode);
+            size++;
         }
-        size++;
-        System.out.println("Hello");
+    }
+
+    public void mergeTwoSortedList(SinglyLinkedList secondSinglyListList) {
+        LinkedListNode currentSecondSinglyLinkedList = secondSinglyListList.getHead();
+        while (currentSecondSinglyLinkedList != null){
+            LinkedListNode linkedListNodeToAdd = new LinkedListNode(currentSecondSinglyLinkedList.getValue());
+            addToSorted(linkedListNodeToAdd);
+            currentSecondSinglyLinkedList = currentSecondSinglyLinkedList.getNext();
+        }
+    }
+
+
+    public void mergeTwoSorted(SinglyLinkedList firstLinkedList, SinglyLinkedList secondLinkedList) {
+        LinkedListNode secondListCurrent = secondLinkedList.getHead();
+
+        while (secondListCurrent != null) {
+            addToSorted(secondListCurrent);
+            secondListCurrent = secondListCurrent.getNext();
+            size++;
+        }
+    }
+
+    public void deleteElementSinglyLinkedList(int value) {
+        LinkedListNode current = head;
+        LinkedListNode temp = null;
+        while (current != null && current.getValue() != value) {
+            temp = current;
+            current = current.getNext();
+        }
+        if (current.getValue() == value) {
+            if (current == head) {
+                deleteFromStart();
+            } else {
+                temp.setNext(current.getNext());
+            }
+        } else {
+            System.out.printf("i dont have the %d", value);
+        }
     }
 
     public void printSinglyLinkedList() {
