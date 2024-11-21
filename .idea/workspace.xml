@@ -5,12 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="79517006-9aab-48e7-8691-181b337bd33b" name="Changes" comment="Custom-stack implementation">
-      <change afterPath="$PROJECT_DIR$/src/CustomTree.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SortingAlgorithms.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/TreeNode.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AltanBurger/Drink.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AltanBurger/Hamburger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AltanBurger/Meal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/AltanBurger/SideItem.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkedListChallenge/ChallengeLinkedList.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkedListChallenge/DistanceInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/LinkedListChallenge/LinkedListNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Circle.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Circle.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CircularSinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/CircularSinglyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CustomStack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/CustomStack.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DoublyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/DoublyLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LinkedListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/LinkedListNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/SinglyLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LinkedList/SinglyLinkedList.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +32,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Record" />
+        <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -36,7 +49,7 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/cagrialtan93/JavaMaster.git&quot;,
+    &quot;url&quot;: &quot;git@github.com:cagrialtan93/JavaMaster.git&quot;,
     &quot;accountId&quot;: &quot;7ad0a13a-5fee-44a6-b768-bedad187a614&quot;
   }
 }</component>
@@ -56,17 +69,46 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.Main.executor": "Debug",
+    "Application.Car.executor": "Run",
+    "Application.DistanceInterface.executor": "Run",
+    "Application.Main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "create.test.in.the.same.root": "true",
     "dart.analysis.tool.window.visible": "false",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/cagrialtan/JavaMaster",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "editor.preferences.fonts.default",
     "show.migrate.to.gradle.popup": "false"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.DistanceInterface">
+    <configuration name="Car" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="UNNAMED_CLASS_CONFIGURATION" value="true" />
+      <option name="MAIN_CLASS_NAME" value="Car" />
+      <module name="JavaMaster" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="DistanceInterface" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="LinkedListChallenge.DistanceInterface" />
+      <module name="JavaMaster" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="LinkedListChallenge.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Main" />
       <module name="JavaMaster" />
@@ -76,7 +118,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.DistanceInterface" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.Car" />
       </list>
     </recent_temporary>
   </component>
@@ -138,11 +182,10 @@
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/Main.java</url>
-          <line>3</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.NullPointerException" package="java.lang" />
+          <option name="timeStamp" value="6" />
+        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>

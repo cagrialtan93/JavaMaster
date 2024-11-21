@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class LinkedListNode {
     private LinkedListNode next;
     private LinkedListNode prev;

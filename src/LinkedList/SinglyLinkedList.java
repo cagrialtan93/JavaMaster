@@ -1,8 +1,4 @@
-import com.sun.security.jgss.GSSUtil;
-
-import javax.swing.*;
-import java.security.cert.CertificateParsingException;
-import java.util.zip.ZipFile;
+package LinkedList;
 
 public class SinglyLinkedList {
     private LinkedListNode head;

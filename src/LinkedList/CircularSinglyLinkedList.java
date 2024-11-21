@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class CircularSinglyLinkedList {
     private LinkedListNode head;
     private LinkedListNode last;

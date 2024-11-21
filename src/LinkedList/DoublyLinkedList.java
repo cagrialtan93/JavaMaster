@@ -1,3 +1,5 @@
+package LinkedList;
+
 public class DoublyLinkedList {
     private LinkedListNode head;
     private LinkedListNode last;
