@@ -1,6 +1,6 @@
 package LinkedListChallenge;
 
-public class ChallengeLinkedList {
+public class ChallengeLinkedList{
     private LinkedListNode head;
     private int size = 0;
     private boolean isDone = true;
